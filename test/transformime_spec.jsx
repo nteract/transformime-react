@@ -1,13 +1,11 @@
 import {
-  renderIntoDocument,
-  findRenderedComponentWithType,
+  createRenderer,
 } from 'react-addons-test-utils';
 
 import { Map } from 'immutable';
 import { expect } from 'chai';
 
 import { Transformime } from '../src/';
-import { TextTransform } from '../src/';
 
 describe('transform', () => {
   it('creates a React element that can be rendered', () => {
@@ -15,13 +13,14 @@ describe('transform', () => {
       'text/plain': 'Hello World',
     });
 
+    const shallowRenderer = createRenderer();
+
     const transformer = new Transformime();
     const element = transformer.transform(mimeBundle);
-    const component = renderIntoDocument(element);
-    expect(component).to.not.be.null;
+    shallowRenderer.render(element);
 
-    const entry = findRenderedComponentWithType(component, TextTransform);
-    expect(entry.textContent).to.equal('Hello World');
-
+    const result = shallowRenderer.getRenderOutput();
+    expect(result.type).to.equal('pre');
+    expect(result.props.children).to.equal('Hello World');
   });
 });
