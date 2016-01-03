@@ -1,13 +1,11 @@
 import React from 'react';
 
-export default class TextTransform extends React.Component {
-  static displayName = 'TextTransform'
+export default class TextDisplay extends React.Component {
+  static displayName = 'TextDisplay'
 
   static propTypes = {
     data: React.PropTypes.string,
   }
-
-  static mimetype = 'text/plain'
 
   render() {
     return (

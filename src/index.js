@@ -1,3 +1,5 @@
-export Transformime from './Transformime';
-export ImageTransform from './ImageTransform';
-export TextTransform from './TextTransform';
+export {
+  richestMimetype,
+  transforms,
+  displayOrder,
+} from './Transform';
