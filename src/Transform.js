@@ -2,6 +2,7 @@ import Immutable from 'immutable';
 
 import TextDisplay from './components/TextDisplay';
 import HTMLDisplay from './components/HTMLDisplay';
+import MarkdownDisplay from './components/MarkdownDisplay';
 
 import {
   PNGDisplay,
@@ -15,6 +16,7 @@ export const transforms = new Immutable.Map({
   'image/jpeg': JPEGDisplay,
   'image/gif': GIFDisplay,
   'text/html': HTMLDisplay,
+  'text/markdown': MarkdownDisplay,
 });
 
 export const displayOrder = new Immutable.List([
