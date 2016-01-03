@@ -38,7 +38,7 @@ export const displayOrder = new Immutable.List([
 export function richestMimetype(bundle, order = displayOrder, tf = transforms) {
   return bundle.keySeq()
                 // we can only use those we have a transform for
-                .filter((mimetype) => tf.has(mimetype))
+                .filter((mimetype) => tf.has(mimetype) && order.includes(mimetype))
                 // the richest is based on the order in displayOrder
                 .sortBy((mimetype) => order.indexOf(mimetype))
                 .first();

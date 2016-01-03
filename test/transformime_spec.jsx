@@ -4,8 +4,10 @@ import {
   createRenderer,
 } from 'react-addons-test-utils';
 
-import { Map } from 'immutable';
+import { List, Map } from 'immutable';
 import { expect } from 'chai';
+
+import TextDisplay from '../src/components/TextDisplay';
 
 import {
   richestMimetype,
@@ -31,8 +33,11 @@ describe('richestMimetype', () => {
       'text/html': '<b>NIY</b>',
     });
 
-    expect(richestMimetype(mimeBundle)).to.equal('text/plain');
+    const order = new List(['text/html', 'text/plain']);
+    const myTransforms = new Map({ 'text/plain': TextDisplay });
 
+    const mimetype = richestMimetype(mimeBundle, order, myTransforms);
+    expect(mimetype).to.equal('text/plain');
   });
 });
 
@@ -45,7 +50,7 @@ describe('transforms', () => {
       'text/html': '<b>NIY</b>',
     });
 
-    const mimetype = richestMimetype(mimeBundle);
+    const mimetype = richestMimetype(mimeBundle, new List(['text/plain']));
     const Element = transforms.get(mimetype);
 
     shallowRenderer.render(<Element data={mimeBundle.get(mimetype)} />);
