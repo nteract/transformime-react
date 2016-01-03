@@ -23,4 +23,20 @@ describe('transform', () => {
     expect(result.type).to.equal('pre');
     expect(result.props.children).to.equal('Hello World');
   });
+  it('falls back to a simpler mimetype if a transform is not available', () => {
+    const mimeBundle = new Map({
+      'text/plain': 'Hello World',
+      'text/html': '<b>NIY</b>',
+    });
+
+    const shallowRenderer = createRenderer();
+
+    const transformer = new Transformime();
+    const element = transformer.transform(mimeBundle);
+    shallowRenderer.render(element);
+
+    const result = shallowRenderer.getRenderOutput();
+    expect(result.type).to.equal('pre');
+    expect(result.props.children).to.equal('Hello World');
+  });
 });
