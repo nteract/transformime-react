@@ -38,8 +38,7 @@ export default class Transformime {
                                   .sortBy((mimetype) => this.displayOrder.indexOf(mimetype))
                                   .first();
 
-    const Transform = this.transforms.get(richestMimetype);
-    return <Transform data={bundle.get(richestMimetype)}
-                      mimetype={richestMimetype} />;
+    const t = React.createFactory(this.transforms.get(richestMimetype));
+    return t({ data: bundle.get(richestMimetype), mimetype: richestMimetype });
   }
 }
