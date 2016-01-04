@@ -36,11 +36,11 @@ return <Transform data={bundle.get(mimetype)} />;
 
 which will return:
 
-```
+```jsx
 <img src='data:image/png;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' />
 ```
 
-as a React element ('image/png' > 'text/plain').
+as a React element. It chose 'image/png' as richer than 'text/plain' for representation.
 
 ### Override the default transforms and display order
 
@@ -61,5 +61,11 @@ const mimetype = richestMimetype(bundle, myOrder, myTransforms);
 Transform = myTransforms.get(mimetype);
 
 return <Transform data={bundle.get(mimetype)} />;
+```
+
+Using the bundle from above, we'll get back:
+
+```jsx
+<code>This is great</code>
 ```
 
