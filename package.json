@@ -20,12 +20,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rgbkrk/transformime-react.git"
+    "url": "git+https://github.com/nteract/transformime-react.git"
   },
   "author": "Kyle Kelley <rgbkrk@gmail.com>",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/rgbkrk/transformime-react/issues"
+    "url": "https://github.com/nteract/transformime-react/issues"
   },
   "babel": {
     "presets": [
@@ -59,7 +59,7 @@
     "react-dom": "^0.14.5",
     "rimraf": "^2.4.1"
   },
-  "homepage": "https://github.com/rgbkrk/transformime-react#readme",
+  "homepage": "https://github.com/nteract/transformime-react#readme",
   "peerDependencies": {
     "immutable": "3.7.x",
     "react": "0.14.x"
