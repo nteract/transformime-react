@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/nteract/transformime-react.svg)](https://travis-ci.org/nteract/transformime-react)
 
+Transforms MIMEtype+data to pure React Elements.
+
 ![Optimus MIME](https://cloud.githubusercontent.com/assets/6437976/8895696/db154a04-3397-11e5-91ca-296b957658a6.png)
 
 ## Installation
@@ -10,7 +12,11 @@
 npm install transformime-react
 ```
 
-Transforms MIMEtype+data to pure React Elements.
+Note that `react` and `immutable` are peer dependencies; you'll need to install those as well if they're not in your project (hint: they're definitely needed to make this package useful at all).
+
+```
+npm install immutable@3.7.x react@0.14.x
+```
 
 ## Usage
 
