@@ -62,7 +62,8 @@
   "homepage": "https://github.com/nteract/transformime-react#readme",
   "peerDependencies": {
     "immutable": "3.7.x",
-    "react": "0.14.x"
+    "react": "0.14.x",
+    "react-dom": "0.14.x"
   },
   "dependencies": {
     "katex": "^0.5.1",
