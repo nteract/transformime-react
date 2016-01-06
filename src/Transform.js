@@ -1,6 +1,7 @@
 import Immutable from 'immutable';
 
 import TextDisplay from './components/TextDisplay';
+import JavaScriptDisplay from './components/JavaScriptDisplay';
 import HTMLDisplay from './components/HTMLDisplay';
 import MarkdownDisplay from './components/MarkdownDisplay';
 import LaTeXDisplay from './components/LaTeXDisplay';
@@ -19,6 +20,7 @@ export const transforms = new Immutable.Map({
   'text/html': HTMLDisplay,
   'text/markdown': MarkdownDisplay,
   'text/latex': LaTeXDisplay,
+  'application/javascript': JavaScriptDisplay,
 });
 
 export const displayOrder = new Immutable.List([
