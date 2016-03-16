@@ -12,7 +12,7 @@ import {
   PNGDisplay,
   GIFDisplay,
   JPEGDisplay,
-} from '../../src/components/ImageDisplay';
+} from '../../src/components/image-display';
 
 describe('PNGDisplay', () => {
   it('renders a single image base64 inline', () => {

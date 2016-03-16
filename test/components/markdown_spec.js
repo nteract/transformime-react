@@ -6,7 +6,7 @@ import {
   renderIntoDocument,
 } from 'react-addons-test-utils';
 
-import MarkdownDisplay from '../../src/components/MarkdownDisplay';
+import MarkdownDisplay from '../../src/components/markdown-display';
 
 describe('MarkdownDisplay', () => {
   it('renders some markdown', () => {

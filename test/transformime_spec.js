@@ -7,7 +7,7 @@ import {
 import { List, Map } from 'immutable';
 import { expect } from 'chai';
 
-import TextDisplay from '../src/components/TextDisplay';
+import TextDisplay from '../src/components/text-display';
 
 import {
   richestMimetype,

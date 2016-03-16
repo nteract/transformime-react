@@ -6,7 +6,7 @@ import {
   renderIntoDocument,
 } from 'react-addons-test-utils';
 
-import LaTeXDisplay from '../../src/components/LaTeXDisplay';
+import LaTeXDisplay from '../../src/components/latex-display';
 
 describe('LaTeXDisplay', () => {
   it('processes basic LaTeX', () => {

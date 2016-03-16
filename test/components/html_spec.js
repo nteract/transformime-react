@@ -6,7 +6,7 @@ import {
   renderIntoDocument,
 } from 'react-addons-test-utils';
 
-import HTMLDisplay from '../../src/components/HTMLDisplay';
+import HTMLDisplay from '../../src/components/html-display';
 
 describe('HTMLDisplay', () => {
   it('renders direct HTML', () => {
