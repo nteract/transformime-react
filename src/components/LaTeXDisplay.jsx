@@ -13,7 +13,8 @@ export default class LaTeXDisplay extends React.Component {
       <div
         dangerouslySetInnerHTML={{ // eslint-disable-line
           __html: katex.renderToString(this.props.data),
-        }}/>
+        }}
+      />
     );
   }
 }

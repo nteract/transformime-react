@@ -10,7 +10,7 @@ class ImageDisplay extends React.Component {
   render() {
     const data = this.props.data;
     return (
-      <img src={'data:' + this.mimetype + ';base64,' + data} />
+      <img src={`data:${this.mimetype};base64,${data}`} />
     );
   }
 }
@@ -18,7 +18,7 @@ class ImageDisplay extends React.Component {
 export class PNGDisplay extends ImageDisplay {
   static displayName = 'PNGDisplay'
   constructor(props) {
-    super(props)
+    super(props);
     this.mimetype = 'image/png';
   }
 }
@@ -26,7 +26,7 @@ export class PNGDisplay extends ImageDisplay {
 export class JPEGDisplay extends ImageDisplay {
   static displayName = 'JPEGDisplay'
   constructor(props) {
-    super(props)
+    super(props);
     this.mimetype = 'image/jpeg';
   }
 }
@@ -34,7 +34,7 @@ export class JPEGDisplay extends ImageDisplay {
 export class GIFDisplay extends ImageDisplay {
   static displayName = 'GIFDisplay'
   constructor(props) {
-    super(props)
+    super(props);
     this.mimetype = 'image/gif';
   }
 }

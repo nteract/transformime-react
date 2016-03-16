@@ -12,7 +12,8 @@ export default class HTMLDisplay extends React.Component {
       <div
         dangerouslySetInnerHTML={{ // eslint-disable-line
           __html: this.props.data,
-        }}/>
+        }}
+      />
     );
   }
 }

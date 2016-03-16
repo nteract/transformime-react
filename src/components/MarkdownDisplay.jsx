@@ -11,7 +11,7 @@ export default class MarkdownDisplay extends React.Component {
 
   render() {
     return (
-      <ReactMarkdown source={this.props.data}/>
+      <ReactMarkdown source={this.props.data} />
     );
   }
 }

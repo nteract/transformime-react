@@ -18,7 +18,7 @@ export default class JavaScriptDisplay extends React.Component {
 
   render() {
     return (
-      <div ref='here' />
+      <div ref="here" />
     );
   }
 }
