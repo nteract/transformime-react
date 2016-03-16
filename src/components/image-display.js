@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ImageDisplay(props) {
+export function ImageDisplay(props) {
   return (
     <img src={`data:${props.mimetype};base64,${props.data}`} />
   );
