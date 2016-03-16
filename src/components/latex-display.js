@@ -1,8 +1,7 @@
 import React from 'react';
+import katex from 'katex';
 
-export default class HTMLDisplay extends React.Component {
-  static displayName = 'HTMLDisplay'
-
+export default class LaTeXDisplay extends React.Component {
   static propTypes = {
     data: React.PropTypes.string,
   }
@@ -11,8 +10,9 @@ export default class HTMLDisplay extends React.Component {
     return (
       <div
         dangerouslySetInnerHTML={{ // eslint-disable-line
-          __html: this.props.data,
-        }}/>
+          __html: katex.renderToString(this.props.data),
+        }}
+      />
     );
   }
 }

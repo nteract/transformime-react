@@ -2,4 +2,4 @@ export {
   richestMimetype,
   transforms,
   displayOrder,
-} from './Transform';
+} from './transform';

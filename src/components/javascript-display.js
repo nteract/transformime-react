@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 export default class JavaScriptDisplay extends React.Component {
-  static displayName = 'JavaScriptDisplay'
-
   static propTypes = {
     data: React.PropTypes.string,
   }
@@ -18,7 +16,7 @@ export default class JavaScriptDisplay extends React.Component {
 
   render() {
     return (
-      <div ref='here' />
+      <div ref="here" />
     );
   }
 }

@@ -1,16 +1,16 @@
 import Immutable from 'immutable';
 
-import TextDisplay from './components/TextDisplay';
-import JavaScriptDisplay from './components/JavaScriptDisplay';
-import HTMLDisplay from './components/HTMLDisplay';
-import MarkdownDisplay from './components/MarkdownDisplay';
-import LaTeXDisplay from './components/LaTeXDisplay';
+import TextDisplay from './components/text-display';
+import JavaScriptDisplay from './components/javascript-display';
+import HTMLDisplay from './components/html-display';
+import MarkdownDisplay from './components/markdown-display';
+import LaTeXDisplay from './components/latex-display';
 
 import {
   PNGDisplay,
   JPEGDisplay,
   GIFDisplay,
-} from './components/ImageDisplay';
+} from './components/image-display';
 
 export const transforms = new Immutable.Map({
   'text/plain': TextDisplay,
