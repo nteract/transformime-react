@@ -1,35 +1,30 @@
 import React from 'react';
 
-class ImageDisplay extends React.Component {
-  static propTypes = {
-    data: React.PropTypes.string,
-  }
-
-  render() {
-    const data = this.props.data;
-    return (
-      <img src={`data:${this.mimetype};base64,${data}`} />
-    );
-  }
+function ImageDisplay(props) {
+  return (
+    <img src={`data:${props.mimetype};base64,${props.data}`} />
+  );
 }
 
-export class PNGDisplay extends ImageDisplay {
-  constructor(props) {
-    super(props);
-    this.mimetype = 'image/png';
-  }
+ImageDisplay.propTypes = {
+  data: React.PropTypes.string.isRequired,
+  mimetype: React.PropTypes.string.isRequired,
+};
+
+export function PNGDisplay(props) {
+  return (
+    <ImageDisplay mimetype="image/png" {...props} />
+  );
 }
 
-export class JPEGDisplay extends ImageDisplay {
-  constructor(props) {
-    super(props);
-    this.mimetype = 'image/jpeg';
-  }
+export function JPEGDisplay(props) {
+  return (
+    <ImageDisplay mimetype="image/jpeg" {...props} />
+  );
 }
 
-export class GIFDisplay extends ImageDisplay {
-  constructor(props) {
-    super(props);
-    this.mimetype = 'image/gif';
-  }
+export function GIFDisplay(props) {
+  return (
+    <ImageDisplay mimetype="image/gif" {...props} />
+  );
 }
