@@ -12,6 +12,15 @@ import {
   JPEGDisplay,
 } from '../../src/components/image-display';
 
+describe('ImageDisplay', () => {
+  it('creates an image based on data and mimetype', () => {
+    const component = shallow(
+      <ImageDisplay data={imageData} mimetype="image/png" />
+    );
+    expect(component.html()).to.equal(`<img src="data:image/png;base64,${imageData}"/>`);
+  });
+});
+
 describe('PNGDisplay', () => {
   it('renders a single image base64 inline', () => {
     const component = shallow(
