@@ -1,8 +1,10 @@
 import React from 'react';
 
+const Ansi = require('ansi-to-react');
+
 export default function TextDisplay(props) {
   return (
-    <pre>{props.data}</pre>
+    <Ansi>{props.data}</Ansi>
   );
 }
 
