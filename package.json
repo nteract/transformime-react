@@ -69,6 +69,7 @@
     "react-dom": "0.14.x"
   },
   "dependencies": {
+    "ansi-to-react": "0.0.1",
     "katex": "^0.5.1",
     "react-markdown": "^1.2.1"
   }
