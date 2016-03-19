@@ -55,7 +55,6 @@ describe('transforms', () => {
 
     shallowRenderer.render(<Element data={mimeBundle.get(mimetype)} />);
     const result = shallowRenderer.getRenderOutput();
-    expect(result.type).to.equal('pre');
     expect(result.props.children).to.equal('Hello World');
   });
 });
