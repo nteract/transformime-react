@@ -51,7 +51,7 @@
     "eslint": "^2.7.0",
     "eslint-config-airbnb": "^6.2.0",
     "eslint-plugin-react": "^4.3.0",
-    "immutable": "3.7.x",
+    "immutable": "^3.8.1",
     "jsdom": "^8.3.0",
     "mkdirp": "^0.5.1",
     "mocha": "^2.2.5",
@@ -62,7 +62,7 @@
   },
   "homepage": "https://github.com/nteract/transformime-react#readme",
   "peerDependencies": {
-    "immutable": "3.7.x",
+    "immutable": "^3.8.1",
     "react": "^0.14.0 || ^15.0.0-0",
     "react-dom": "^0.14.0 || ^15.0.0-0"
   },
