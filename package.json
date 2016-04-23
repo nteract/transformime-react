@@ -49,9 +49,11 @@
     "chai-immutable": "^1.5.4",
     "enzyme": "^2.2.0",
     "eslint": "^2.7.0",
-    "eslint-config-airbnb": "^6.2.0",
-    "eslint-plugin-react": "^4.3.0",
-    "immutable": "3.7.x",
+    "eslint-config-airbnb": "^8.0.0",
+    "eslint-plugin-import": "^1.5.0",
+    "eslint-plugin-jsx-a11y": "^1.0.2",
+    "eslint-plugin-react": "^5.0.1",
+    "immutable": "^3.8.1",
     "jsdom": "^8.3.0",
     "mkdirp": "^0.5.1",
     "mocha": "^2.2.5",
@@ -62,13 +64,13 @@
   },
   "homepage": "https://github.com/nteract/transformime-react#readme",
   "peerDependencies": {
-    "immutable": "3.7.x",
+    "immutable": "^3.8.1",
     "react": "^0.14.0 || ^15.0.0-0",
     "react-dom": "^0.14.0 || ^15.0.0-0"
   },
   "dependencies": {
     "ansi-to-react": "0.0.1",
-    "katex": "^0.5.1",
+    "katex": "^0.6.0",
     "react-markdown": "^2.1.1"
   }
 }
