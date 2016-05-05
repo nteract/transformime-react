@@ -1,13 +1,13 @@
 import React from 'react';
 import { expect } from 'chai';
 
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 import HTMLDisplay from '../../src/components/html-display';
 
 describe('HTMLDisplay', () => {
   it('renders direct HTML', () => {
-    const component = shallow(
+    const component = mount(
       <HTMLDisplay data={'<b>woo</b>'} />
     );
 
