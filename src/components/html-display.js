@@ -8,9 +8,15 @@ export default class HTMLDisplay extends React.Component {
 
   componentDidMount() {
     if (this.refs.here) {
-      const range = document.createRange();
-      const fragment = range.createContextualFragment(this.props.data);
-      ReactDOM.findDOMNode(this.refs.here).appendChild(fragment);
+      if (!(document.createRange && Range && Range.prototype.createContextualFragment)) {
+        const range = document.createRange();
+        const fragment = range.createContextualFragment(this.props.data);
+        ReactDOM.findDOMNode(this.refs.here).appendChild(fragment);
+      } else {
+        console.warn('Environment does not support Range ' +
+          'createContextualFragment, falling back on innerHTML');
+        ReactDOM.findDOMNode(this.refs.here).innerHTML = this.props.data;
+      }
     }
   }
 
