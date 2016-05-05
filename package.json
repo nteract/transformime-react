@@ -1,6 +1,6 @@
 {
   "name": "transformime-react",
-  "version": "0.6.2",
+  "version": "0.7.0",
   "description": "Transformime that returns React components",
   "files": [
     "*.md",
