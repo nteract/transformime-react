@@ -8,7 +8,7 @@ export default class HTMLDisplay extends React.Component {
 
   componentDidMount() {
     if (this.refs.here) {
-      if (!(document.createRange && Range && Range.prototype.createContextualFragment)) {
+      if (document.createRange && Range && Range.prototype.createContextualFragment) {
         const range = document.createRange();
         const fragment = range.createContextualFragment(this.props.data);
         ReactDOM.findDOMNode(this.refs.here).appendChild(fragment);
