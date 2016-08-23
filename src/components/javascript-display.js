@@ -14,7 +14,7 @@ export default class HTMLDisplay extends React.Component {
         const element = ReactDOM.findDOMNode(this.refs.here); // eslint-disable-line
         eval(this.props.data); // eslint-disable-line
       } catch (err) {
-        console.error('Could not execute user Javascript', err);
+        console.error('Could not execute user Javascript', err); //eslint-disable-line
       }
     }
   }

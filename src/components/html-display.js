@@ -13,8 +13,6 @@ export default class HTMLDisplay extends React.Component {
         const fragment = range.createContextualFragment(this.props.data);
         ReactDOM.findDOMNode(this.refs.here).appendChild(fragment);
       } else {
-        console.warn('Environment does not support Range ' +
-          'createContextualFragment, falling back on innerHTML');
         ReactDOM.findDOMNode(this.refs.here).innerHTML = this.props.data;
       }
     }

@@ -17,7 +17,7 @@ describe('ImageDisplay', () => {
     const component = shallow(
       <ImageDisplay data={imageData} mimetype="image/png" />
     );
-    expect(component.html()).to.equal(`<img src="data:image/png;base64,${imageData}"/>`);
+    expect(component.html()).to.equal(`<img role="presentation" src="data:image/png;base64,${imageData}"/>`);
   });
 });
 
