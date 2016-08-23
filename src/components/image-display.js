@@ -2,7 +2,7 @@ import React from 'react';
 
 export function ImageDisplay(props) {
   return (
-    <img src={`data:${props.mimetype};base64,${props.data}`} />
+    <img role="presentation" src={`data:${props.mimetype};base64,${props.data}`} />
   );
 }
 
