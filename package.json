@@ -74,7 +74,6 @@
     "ansi-to-react": "0.0.4",
     "commonmark": "^0.26.0",
     "commonmark-react-renderer": "^4.3.1",
-    "katex": "^0.6.0",
     "mathjax-electron": "^1.1.0"
   }
 }
