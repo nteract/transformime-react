@@ -6,6 +6,7 @@ export default class HTMLDisplay extends React.Component {
     data: React.PropTypes.string,
   }
 
+
   componentDidMount() {
     if (this.refs.here) {
       if (document.createRange && Range && Range.prototype.createContextualFragment) {
@@ -16,6 +17,10 @@ export default class HTMLDisplay extends React.Component {
         ReactDOM.findDOMNode(this.refs.here).innerHTML = this.props.data;
       }
     }
+  }
+
+  shouldComponentUpdate() {
+    return false;
   }
 
   render() {

@@ -1,14 +1,22 @@
 import React from 'react';
-import katex from 'katex';
 
-export default function LaTeXDisplay(props) {
-  return (
-    <div
-      dangerouslySetInnerHTML={{ // eslint-disable-line
-        __html: katex.renderToString(props.data),
-      }}
-    />
-  );
+const mathjaxHelper = require('mathjax-electron');
+
+export default class LaTeXDisplay extends React.Component {
+  componentDidMount() {
+    this.el.innerHTML = this.props.data;
+    mathjaxHelper.loadAndTypeset(document, this.el);
+  }
+
+  shouldComponentUpdate() {
+    return false;
+  }
+
+  render() {
+    return (
+      <div ref={(el) => { this.el = el; }} />
+    );
+  }
 }
 
 LaTeXDisplay.propTypes = {

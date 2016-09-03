@@ -5,8 +5,7 @@ const imageData = 'R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
 import { shallow } from 'enzyme';
 
-import {
-  ImageDisplay,
+import ImageDisplay, {
   PNGDisplay,
   GIFDisplay,
   JPEGDisplay,
@@ -17,7 +16,11 @@ describe('ImageDisplay', () => {
     const component = shallow(
       <ImageDisplay data={imageData} mimetype="image/png" />
     );
-    expect(component.html()).to.equal(`<img role="presentation" src="data:image/png;base64,${imageData}"/>`);
+
+    const img = component.find('img');
+    // Slight a11y check
+    expect(img.prop('role')).to.equal('presentation');
+    expect(img.prop('src')).to.equal(`data:image/png;base64,${imageData}`);
   });
 });
 
