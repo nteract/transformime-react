@@ -13,9 +13,16 @@ describe('HTMLDisplay', () => {
 
     expect(component.html()).to.equal('<div><b>woo</b></div>');
   });
-  it.skip('executes embedded <script> tags', () => {
-    // Skipped because setting innerHTML definitely doesn't
-    // run the inline script
-    // We'll want to use a document fragment like in transformime
+  it('executes embedded <script> tags', (done) => {
+    const originalCreateRange = global.document.createRange;
+    global.document.createRange = () => {
+      done(); // fake spy
+      return originalCreateRange();
+    }
+
+    const component = mount(
+      <HTMLDisplay data={'<script>window.x = 2</script>'} />
+    );
+
   });
 });

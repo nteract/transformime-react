@@ -8,7 +8,15 @@ const renderer = new MarkdownRenderer();
 
 const mdRender = (input) => renderer.render(parser.parse(input));
 
-const MarkdownDisplay = props => <div>{mdRender(props.data)}</div>;
+export class MarkdownDisplay extends React.Component {
+  shouldComponentUpdate() {
+    return false;
+  }
+
+  render() {
+    return <div>{mdRender(this.props.data)}</div>;
+  }
+}
 
 MarkdownDisplay.propTypes = {
   data: React.PropTypes.string.isRequired,

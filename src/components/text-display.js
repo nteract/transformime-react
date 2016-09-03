@@ -2,10 +2,14 @@ import React from 'react';
 
 const Ansi = require('ansi-to-react');
 
-export default function TextDisplay(props) {
-  return (
-    <Ansi>{props.data}</Ansi>
-  );
+export default class TextDisplay extends React.Component {
+  shouldComponentUpdate() {
+    return false;
+  }
+
+  render() {
+    return <Ansi>{this.props.data}</Ansi>;
+  }
 }
 
 TextDisplay.propTypes = {

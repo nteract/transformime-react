@@ -19,6 +19,10 @@ export default class HTMLDisplay extends React.Component {
     }
   }
 
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
     return (
       <div ref="here" />
