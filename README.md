@@ -1,5 +1,7 @@
 # transformime-react
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/nteract/transformime-react.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/nteract/transformime-react.svg)](https://travis-ci.org/nteract/transformime-react)
 
 Transforms MIMEtype+data to pure React Elements.
