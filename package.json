@@ -62,7 +62,7 @@
     "react-addons-test-utils": "^15.0.1",
     "react-dom": "^15.0.1",
     "rimraf": "^2.4.1",
-    "sinon": "^1.17.5"
+    "sinon": "^2.0.0"
   },
   "homepage": "https://github.com/nteract/transformime-react#readme",
   "peerDependencies": {
